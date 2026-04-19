@@ -20,7 +20,7 @@ const login = async (req, res) => {
     }
 
     const token = jwt.sign(
-      { id: finduser._id },
+      { id: finduser._id,username: finduser.username },
       jwt_secrete
     );
 
